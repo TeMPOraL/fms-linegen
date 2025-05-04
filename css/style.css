@@ -1,0 +1,108 @@
+/* Basic body styling */
+body {
+  background-color: #f9fafb; /* bg-gray-50 */
+  font-family: sans-serif; /* font-sans */
+  padding: 1rem; /* p-4 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Centered container */
+.container {
+  max-width: 56rem; /* max-w-4xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Title styling */
+h1 {
+  font-size: 1.5rem; /* text-2xl */
+  line-height: 2rem;
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+  text-align: center; /* text-center */
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* gap-4 */
+  justify-content: center;
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* General button styling */
+button {
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  color: white;
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow */
+  cursor: pointer;
+  border: none;
+}
+
+/* Specific button colors */
+#randomizeBtn {
+  background-color: #2563eb; /* bg-blue-600 */
+}
+#randomizeBtn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Sheet styling */
+#sheet {
+  background-color: white; /* bg-white */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg */
+  border-radius: 1rem; /* rounded-2xl */
+  padding: 1.5rem; /* p-6 */
+}
+
+/* Row styling */
+.trace-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+.trace-row:last-child {
+  margin-bottom: 0; /* last:mb-0 */
+}
+
+/* Image slot styling */
+.img-slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb; /* bg-gray-200 */
+  cursor: pointer;
+  border-radius: 1rem; /* rounded-2xl */
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* shadow */
+  /* width/height set in JS */
+}
+.img-slot:hover {
+  background-color: #d1d5db; /* hover:bg-gray-300 */
+}
+
+/* Plus sign inside image slot */
+.img-slot .plus {
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+  color: #6b7280; /* text-gray-500 */
+  user-select: none; /* select-none */
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Hidden file input */
+.img-slot input[type="file"] {
+  display: none; /* hidden */
+}
+
+/* SVG styling */
+.trace-svg {
+  margin-left: 1rem; /* mx-4 */
+  margin-right: 1rem; /* mx-4 */
+  flex-shrink: 0; /* flex-shrink-0 */
+}
