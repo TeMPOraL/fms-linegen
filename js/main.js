@@ -1,7 +1,8 @@
 const NUM_LINES = 7;
 const LINE_HEIGHT = 120;
 const IMG_SIZE = 80;
-const SVG_WIDTH = 600;
+// Adjust SVG width for better A4 print fit
+const SVG_WIDTH = 520;
 
 /* ---------- Path generators ---------- */
 // (These remain unchanged for now, but could be simplified if desired)

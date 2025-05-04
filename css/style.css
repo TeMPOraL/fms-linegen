@@ -106,3 +106,73 @@ button {
   margin-right: 1rem; /* mx-4 */
   flex-shrink: 0; /* flex-shrink-0 */
 }
+
+/* ---------- Print Styles ---------- */
+@media print {
+  /* Hide non-essential elements */
+  body > .container > h1,
+  body > .container > .button-container {
+    display: none;
+  }
+
+  /* Reset body styles for printing */
+  body {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Adjust container and sheet for printing */
+  .container {
+    max-width: none; /* Allow full width */
+    margin: 0;
+    padding: 0;
+  }
+
+  #sheet {
+    box-shadow: none; /* Remove shadow */
+    border-radius: 0; /* Remove rounded corners */
+    padding: 0; /* Remove padding */
+    margin: 0;
+    width: 100%; /* Use full available width */
+    border: none; /* Remove any potential border */
+  }
+
+  /* Ensure rows take full width if needed */
+  .trace-row {
+    page-break-inside: avoid; /* Try to keep rows from splitting across pages */
+    margin-bottom: 1rem; /* Add some space between rows for print */
+  }
+  .trace-row:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Ensure image slots print background images */
+  .img-slot {
+    box-shadow: none;
+    border: 1px solid #ccc; /* Add a light border for definition */
+    background-color: white !important; /* Ensure background is white */
+    -webkit-print-color-adjust: exact !important; /* Force background image printing in Chrome/Safari */
+    print-color-adjust: exact !important; /* Standard property */
+  }
+
+  /* Ensure plus sign is hidden if image loaded */
+  .img-slot .plus {
+     display: none; /* Hide plus by default in print */
+  }
+  /* Re-show plus if opacity was not set to 0 (i.e., no image loaded) */
+  .img-slot .plus[style*="opacity: 0"] {
+      display: none;
+  }
+   .img-slot .plus:not([style*="opacity: 0"]) {
+      display: block !important; /* Or inline, depending on desired layout */
+      opacity: 1 !important; /* Ensure it's visible */
+   }
+
+
+  /* Ensure SVG paths are visible */
+  .trace-svg path {
+    stroke: black !important; /* Use black for better print visibility */
+    stroke-dasharray: 4 3 !important; /* Adjust dash for potentially different DPI */
+  }
+}
