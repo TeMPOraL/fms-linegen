@@ -73,9 +73,9 @@ function buildRow(){
     // Use imported generateRandomPath and pass SVG_WIDTH, LINE_HEIGHT
     path.setAttribute('d',generateRandomPath(SVG_WIDTH, LINE_HEIGHT));
     path.setAttribute('fill','none');
-    path.setAttribute('stroke','#4B5563'); // Use hex color directly
-    path.setAttribute('stroke-width','2');
-    path.setAttribute('stroke-dasharray','8 6');
+    path.setAttribute('stroke','#9CA3AF'); // Lighter gray for screen: text-gray-400
+    path.setAttribute('stroke-width','1.5'); // Thinner line
+    path.setAttribute('stroke-dasharray','10 10'); // Longer, sparser dashes
     path.setAttribute('stroke-linecap','round');
   }
   updatePath();

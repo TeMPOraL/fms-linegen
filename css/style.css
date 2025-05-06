@@ -173,6 +173,7 @@ button {
   /* Ensure SVG paths are visible */
   .trace-svg path {
     stroke: black !important; /* Use black for better print visibility */
-    stroke-dasharray: 4 3 !important; /* Adjust dash for potentially different DPI */
+    /* stroke-width will be inherited from the screen style (1.5px) */
+    stroke-dasharray: 8 8 !important; /* Less dense dash pattern for print */
   }
 }
