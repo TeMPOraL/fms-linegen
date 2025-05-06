@@ -110,6 +110,14 @@ function buildSheetAndSyncURL(generateNewSeed = false) {
   setPrngSeed(seedToUse); // Initialize PRNG in paths.js with this seed
   window.location.hash = `seed=${seedToUse}`; // Update URL
 
+  // Update footer
+  const currentDate = new Date();
+  const formattedDate = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')}`;
+  const sheetInfoEl = document.getElementById('sheetInfo');
+  if (sheetInfoEl) {
+    sheetInfoEl.textContent = `Seed: ${seedToUse} | Date: ${formattedDate}`;
+  }
+
   const sheet = document.getElementById('sheet');
   sheet.innerHTML = ''; // Clear previous content
   const newRows = [];
