@@ -12,3 +12,5 @@ them by categories; otherwise, whatever works best for you is best. You may stor
 as well as any instructions for yourself to make your work more efficient and correct.
 
 ## Project design
+
+- Prefer separating concerns into different JavaScript files to keep individual files focused and reduce the amount of repeated, unmodified code in diffs. For example, mathematical or algorithmic logic should be in its own file, separate from DOM manipulation or application flow logic.
